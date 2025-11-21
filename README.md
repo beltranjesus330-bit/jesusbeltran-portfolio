@@ -53,7 +53,7 @@ Sección destinada a mostrar mis trabajos más relevantes:
 
 ### ✉️ Contacto
 
--   **Correo:** jesusdavidbeltranalvarez@gmail.com\
+-   **Correo:** jbeltran24@cuc.edu.co\
 -   Redes sociales o GitHub (si aplica)
 
 ## 🎨 Características del Diseño
