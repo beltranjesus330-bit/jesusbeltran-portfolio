@@ -1,0 +1,10 @@
+/* Estilo para el efecto hover de los proyectos */
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        /* Estilo para el scroll-spy */
+        .nav-link.active {
+            color: #3b82f6; /* Color de acento */
+            border-bottom: 2px solid #3b82f6;
+        }

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Jesús David Beltrán Álvarez</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carga de Lucide Icons (para íconos) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Configuración de Tailwind para un color de acento moderno -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#0f172a', // slate-900
+                        'secondary-dark': '#1e293b', // slate-800
+                        'accent': '#3b82f6', // blue-500
+                        'text-light': '#f1f5f9', // slate-100
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-primary-dark text-text-light font-sans">
+
+    <!-- Barra de Navegación (Fixed) -->
+    <header class="sticky top-0 z-50 bg-secondary-dark/95 backdrop-blur-sm shadow-xl border-b border-slate-700">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-2xl font-bold text-accent hover:text-text-light transition duration-300">JDBA</a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#inicio" class="nav-link text-text-light hover:text-accent pb-1 transition duration-200" data-section="inicio">Inicio</a>
+                <a href="#sobre-mi" class="nav-link text-text-light hover:text-accent pb-1 transition duration-200" data-section="sobre-mi">Sobre mí</a>
+                <a href="#proyectos" class="nav-link text-text-light hover:text-accent pb-1 transition duration-200" data-section="proyectos">Proyectos</a>
+                <a href="#habilidades" class="nav-link text-text-light hover:text-accent pb-1 transition duration-200" data-section="habilidades">Habilidades</a>
+                <a href="#educacion" class="nav-link text-text-light hover:text-accent pb-1 transition duration-200" data-section="educacion">Educación</a>
+                <a href="#contacto" class="nav-link text-text-light hover:text-accent pb-1 transition duration-200" data-section="contacto">Contacto</a>
+            </div>
+            <!-- Botón de menú para móvil -->
+            <button id="menu-button" class="md:hidden p-2 rounded-lg text-text-light hover:bg-slate-700 transition duration-300">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+        <!-- Menú móvil (oculto por defecto) -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-slate-700">
+            <a href="#inicio" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-light hover:bg-slate-700 transition duration-300" data-section="inicio">Inicio</a>
+            <a href="#sobre-mi" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-light hover:bg-slate-700 transition duration-300" data-section="sobre-mi">Sobre mí</a>
+            <a href="#proyectos" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-light hover:bg-slate-700 transition duration-300" data-section="proyectos">Proyectos</a>
+            <a href="#habilidades" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-light hover:bg-slate-700 transition duration-300" data-section="habilidades">Habilidades</a>
+            <a href="#educacion" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-light hover:bg-slate-700 transition duration-300" data-section="educacion">Educación</a>
+            <a href="#contacto" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-light hover:bg-slate-700 transition duration-300" data-section="contacto">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección 1: Inicio (Hero) -->
+        <section id="inicio" class="min-h-screen flex items-center justify-center text-center p-4">
+            <div class="max-w-4xl mx-auto py-24 sm:py-32">
+                <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-text-light animate-pulse-slow">
+                    Jesús David Beltrán Álvarez
+                </h1>
+                <p class="mt-4 text-xl sm:text-2xl text-slate-400 font-light">
+                    Estudiante de Ingeniería de Sistemas.
+                </p>
+                <div class="mt-10 flex justify-center space-x-4">
+                    <a href="#proyectos" class="px-6 py-3 bg-accent text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105">
+                        Ver Proyectos
+                    </a>
+                    <a href="#contacto" class="px-6 py-3 border border-slate-600 text-text-light font-semibold rounded-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105">
+                        Contáctame
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Sobre mí -->
+        <section id="sobre-mi" class="py-20 md:py-32 border-t border-slate-800">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold mb-4 text-accent text-center">Sobre mí</h2>
+                <div class="bg-secondary-dark p-8 rounded-xl shadow-2xl transition duration-500 hover:shadow-accent/30">
+                    <p class="text-lg text-slate-300 leading-relaxed">
+                        Soy estudiante de Ingeniería de Sistemas en la Universidad de la Costa, actualmente cursando cuarto semestre. Me caracterizo por ser una persona activa, creativa y con una fuerte capacidad de aprendizaje. Poseo habilidades en el diseño y desarrollo de soluciones tecnológicas, así como en la creación de proyectos innovadores relacionados con el entorno digital. Me motiva la mejora continua, el trabajo en equipo y la búsqueda de nuevas oportunidades para aplicar mis conocimientos de manera efectiva y profesional.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Proyectos -->
+        <section id="proyectos" class="py-20 md:py-32 border-t border-slate-800">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold mb-12 text-accent text-center">Proyectos Destacados</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+
+                    <!-- Proyecto 1: Secreto en la Piel -->
+                    <div class="project-card bg-secondary-dark p-6 rounded-xl shadow-lg transition duration-500 cursor-pointer border border-slate-700">
+                        <i data-lucide="book-open-text" class="w-8 h-8 text-accent mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-2 text-text-light">Mi Negocio IA</h3>
+                        <p class="text-slate-400">Aplicación tipo invetario, que busca ayudar a emprendimientos y pequeños negocios. (Concepto / En desarrollo)</p>
+                        <span class="mt-4 inline-block text-xs font-medium px-3 py-1 bg-blue-900/50 text-accent rounded-full">App Móvil</span>
+                    </div>
+
+                    <!-- Proyecto 2: Flame Hot -->
+                    <div class="project-card bg-secondary-dark p-6 rounded-xl shadow-lg transition duration-500 cursor-pointer border border-slate-700">
+                        <i data-lucide="heart" class="w-8 h-8 text-accent mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-2 text-text-light">Flame Hot</h3>
+                        <p class="text-slate-400">Aplicación innovadora diseñada para la interacción y comunicación entre parejas. (Concepto / En desarrollo)</p>
+                        <span class="mt-4 inline-block text-xs font-medium px-3 py-1 bg-blue-900/50 text-accent rounded-full">Web/Móvil</span>
+                    </div>
+
+                    <!-- Proyecto 3: BELAV -->
+                    <div class="project-card bg-secondary-dark p-6 rounded-xl shadow-lg transition duration-500 cursor-pointer border border-slate-700">
+                        <i data-lucide="t-shirt" class="w-8 h-8 text-accent mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-2 text-text-light">BELAV</h3>
+                        <p class="text-slate-400">Marca de ropa urbana en desarrollo. Un proyecto que combina diseño, creatividad y visión de negocio digital.</p>
+                        <span class="mt-4 inline-block text-xs font-medium px-3 py-1 bg-blue-900/50 text-accent rounded-full">Emprendimiento</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 4: Habilidades -->
+        <section id="habilidades" class="py-20 md:py-32 border-t border-slate-800">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold mb-12 text-accent text-center">Habilidades</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+
+                    <!-- Habilidad 1: Programación Básica -->
+                    <div class="p-4 bg-secondary-dark rounded-xl text-center hover:bg-slate-700 transition duration-300 transform hover:scale-105 shadow-md border border-slate-700">
+                        <i data-lucide="code" class="w-6 h-6 text-accent mx-auto mb-2"></i>
+                        <p class="text-sm font-medium">Programación</p>
+                        <p class="text-xs text-slate-400">Básica</p>
+                    </div>
+
+                    <!-- Habilidad 2: Multimedia -->
+                    <div class="p-4 bg-secondary-dark rounded-xl text-center hover:bg-slate-700 transition duration-300 transform hover:scale-105 shadow-md border border-slate-700">
+                        <i data-lucide="film" class="w-6 h-6 text-accent mx-auto mb-2"></i>
+                        <p class="text-sm font-medium">Multimedia</p>
+                        <p class="text-xs text-slate-400">Creación/Edición</p>
+                    </div>
+
+                    <!-- Habilidad 3: Diseño Digital -->
+                    <div class="p-4 bg-secondary-dark rounded-xl text-center hover:bg-slate-700 transition duration-300 transform hover:scale-105 shadow-md border border-slate-700">
+                        <i data-lucide="layout-grid" class="w-6 h-6 text-accent mx-auto mb-2"></i>
+                        <p class="text-sm font-medium">Diseño Digital</p>
+                        <p class="text-xs text-slate-400">UX/UI</p>
+                    </div>
+
+                    <!-- Habilidad 4: Creatividad -->
+                    <div class="p-4 bg-secondary-dark rounded-xl text-center hover:bg-slate-700 transition duration-300 transform hover:scale-105 shadow-md border border-slate-700">
+                        <i data-lucide="lightbulb" class="w-6 h-6 text-accent mx-auto mb-2"></i>
+                        <p class="text-sm font-medium">Creatividad</p>
+                        <p class="text-xs text-slate-400">Innovación</p>
+                    </div>
+
+                    <!-- Habilidad 5: Resolución de Problemas -->
+                    <div class="p-4 bg-secondary-dark rounded-xl text-center hover:bg-slate-700 transition duration-300 transform hover:scale-105 shadow-md border border-slate-700">
+                        <i data-lucide="brain-circuit" class="w-6 h-6 text-accent mx-auto mb-2"></i>
+                        <p class="text-sm font-medium">Resolución</p>
+                        <p class="text-xs text-slate-400">De Problemas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 5: Educación -->
+        <section id="educacion" class="py-20 md:py-32 border-t border-slate-800">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold mb-8 text-accent text-center">Educación</h2>
+
+                <div class="relative pl-6 md:pl-10">
+                    <!-- Línea de tiempo -->
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-slate-700 rounded-full hidden md:block"></div>
+
+                    <!-- Punto de la línea de tiempo -->
+                    <div class="relative mb-8 md:pl-8">
+                        <div class="absolute -left-1.5 md:-left-2.5 top-1 h-4 w-4 rounded-full bg-accent ring-4 ring-primary-dark hidden md:block"></div>
+                        <div class="bg-secondary-dark p-6 rounded-xl shadow-xl border border-slate-700 transition duration-300 hover:border-accent">
+                            <h3 class="text-2xl font-semibold text-text-light">Ingeniería de Sistemas</h3>
+                            <p class="text-lg text-slate-300 mb-1">Universidad de la Costa (CUC)</p>
+                            <p class="text-accent font-medium">En curso (Cuarto Semestre)</p>
+                            <p class="text-sm text-slate-400 mt-2">Adquiriendo bases sólidas en desarrollo de software, arquitectura de sistemas y gestión de proyectos tecnológicos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 6: Contacto -->
+        <section id="contacto" class="py-20 md:py-32 border-t border-slate-800 bg-secondary-dark">
+            <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold mb-4 text-accent">Contáctame</h2>
+                <p class="text-lg text-slate-300 mb-8">Estoy disponible para nuevas oportunidades y colaboración en proyectos. ¡Conversemos!</p>
+
+                <!-- Email -->
+                <div class="mb-6 bg-primary-dark p-4 rounded-lg shadow-xl hover:shadow-accent/30 transition duration-300">
+                    <p class="text-xl font-medium mb-1 flex justify-center items-center">
+                        <i data-lucide="mail" class="w-5 h-5 mr-3 text-accent"></i>
+                        Correo Electrónico
+                    </p>
+                    <a href="mailto:jbeltran24@cuc.edu.co" class="text-accent text-lg hover:underline transition duration-300">jbeltran24@cuc.edu.co</a>
+                </div>
+
+                <!-- Redes Sociales/GitHub -->
+                <div class="mt-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-text-light">Mis Redes</h3>
+                    <div class="flex justify-center space-x-6">
+                        <!-- GitHub (Placeholder) -->
+                        <a href="#" target="_blank" class="text-slate-400 hover:text-accent transition duration-300">
+                            <i data-lucide="github" class="w-8 h-8"></i>
+                        </a>
+                        <!-- LinkedIn (Placeholder) -->
+                        <a href="#" target="_blank" class="text-slate-400 hover:text-accent transition duration-300">
+                            <i data-lucide="linkedin" class="w-8 h-8"></i>
+                        </a>
+                        <!-- Otra Red Social (Placeholder) -->
+                        <a href="#" target="_blank" class="text-slate-400 hover:text-accent transition duration-300">
+                            <i data-lucide="twitter" class="w-8 h-8"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark border-t border-slate-800 py-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-500">
+            <p>&copy; 2025 Jesús David Beltrán Álvarez.</p>
+        </div>
+    </footer>
+
+    <!-- Script para la inicialización de íconos, menú móvil y scroll-spy -->
+    <script src="script.js"></script>
+</body>
+</html>
